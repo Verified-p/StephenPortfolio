@@ -1,0 +1,473 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Stephen Akelo Portfolio{% endblock %}
+{% load static %}
+{% block content %}
+
+<main>
+
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <img src="{% static 'img/hero-bg.jpg' %}" alt="Hero background" data-aos="fade-in" class="">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2>Stephen Akelo</h2>
+    <p>I'm <span class="typed" data-typed-items="Creative Writer, Graphic Designer, Visual Content Creator, IT Specialist, Statistician"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+  </div>
+
+</section><!-- /Hero Section -->
+
+          <!-- About Section -->
+  <section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About</h2>
+      <p>I’m a creative writer, graphic designer, and IT support enthusiast with a passion for blending visual storytelling with functional digital solutions. With a foundation in Applied Statistics and hands-on experience in content creation, I specialize in delivering polished, high-impact work that builds brands and connects with audiences.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-4">
+          <img src="{% static 'img/my-profile-img.jpg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 content">
+          <h2>Creative Writer & Graphic Designer</h2>
+          <p class="fst-italic py-3">
+            I'm a multi-skilled digital creator helping individuals and brands communicate effectively through words and visuals. I combine storytelling with design to create memorable content that resonates.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>21 November 2000</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Postgraduate</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+254 768 914 692</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kadongo, Kenya</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSc in Applied Statistics</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>stephenokinyi405@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="py-3">
+            With experience in training, tech support, and content production, I bring both creativity and practicality to my work. From writing high-ranking blog content to designing eBooks and teaching Java, I love helping others communicate and connect through tech and design.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section><!-- /About Section -->
+
+  <!-- Stats Section -->
+  <section id="stats" class="stats section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-emoji-smile"></i>
+            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Happy Clients</strong> <span>Served across content and design projects</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-journal-richtext"></i>
+            <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Projects Completed</strong> <span>In writing, design & training</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-headset"></i>
+            <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Support Hours</strong> <span>Provided for systems & student training</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-people"></i>
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Workshops Led</strong> <span>Covering IT, programming & design</span></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Stats Section -->
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Skills</h2>
+      <p>Here are some of the tools and technologies I work with to deliver effective solutions and content.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row skills-content skills-animation">
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill"><span>Content Writing (SEO & Copywriting)</span> <i class="val">95%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill"><span>Adobe Photoshop & Illustrator</span> <i class="val">85%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill"><span>Canva Design</span> <i class="val">98%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" style="width: 98%"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill"><span>SPSS & Python (Data Analysis)</span> <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill"><span>Java & C++ Programming (Basic)</span> <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill"><span>Networking & IT Support</span> <i class="val">85%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Skills Section -->
+
+         <!-- Resume Section -->
+  <section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>Creative and driven content writer and graphic designer with a passion for impactful communication. I help brands stand out by delivering compelling words and visuals that build trust, inspire action, and engage audiences. Below is a summary of my education, experience, and professional journey.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Left Column -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title">Summary</h3>
+
+          <div class="resume-item pb-0">
+            <h4>Okinyi Stephen Akelo</h4>
+            <p><em>Multi-skilled Creative Writer and Graphic Designer with over 2 years of experience helping brands tell their story through engaging content and visual design. Specializes in creating SEO-friendly articles, marketing copy, and compelling graphics for both print and digital platforms. Passionate about turning ideas into visuals and words that inform, engage, and convert.</em></p>
+            <ul>
+              <li>Kadongo, Kenya</li>
+              <li>0768914692</li>
+              <li>stephenokinyi405@gmail.com</li>
+            </ul>
+          </div><!-- End Resume Item -->
+
+          <h3 class="resume-title">Education & Training</h3>
+
+          <div class="resume-item">
+            <h4>Bachelor of Science in Applied Statistics</h4>
+            <h5>2019 - 2024</h5>
+            <p><em>Kisii University, Kenya</em></p>
+            <p>Graduated with Second Class Honours (Lower Division). Gained strong analytical skills and hands-on experience with data analysis tools such as SPSS and Python. Developed a solid foundation in statistical modeling and interpretation.</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Kenya Certificate of Secondary Education (KCSE)</h4>
+            <h5>2015 - 2018</h5>
+            <p><em>Mbita High School, Kenya</em></p>
+            <p>Earned a mean grade of C+. Participated in science and computer-related subjects, laying the groundwork for future studies in statistics and computing.</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Kenya Certificate of Primary Education (KCPE)</h4>
+            <h5>2005 - 2014</h5>
+            <p><em>Omuga Primary School, Kenya</em></p>
+            <p>Achieved 324 marks. Built a strong academic base and developed discipline and focus that guided future learning.</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Certificate in Computer Applications</h4>
+            <p><em>Omuga Technical and Vocational Institute</em></p>
+            <p>Trained in essential computer applications and basic IT skills. Developed a working knowledge of key software and programming languages including Java, C++, and Python.</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>IT Internship</h4>
+            <h5>April 2022</h5>
+            <p><em>Omuga Technical and Vocational Institute</em></p>
+            <p>Provided computer training in Java and C++ to students. Assisted with the installation and configuration of new systems, and contributed to general IT support services including troubleshooting and network setup.</p>
+          </div>
+        </div><!-- End Left Column -->
+
+        <!-- Right Column -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="resume-title">Professional Experience</h3>
+
+          <div class="resume-item">
+            <h4>Freelance Creative Writer & Graphic Designer</h4>
+            <h5>2022 - Present</h5>
+            <p><em>Remote / Client-Based Projects</em></p>
+            <ul>
+              <li>Created SEO-optimized blog articles and website content for various industries including tech, lifestyle, and education.</li>
+              <li>Designed visual materials such as social media graphics, brand kits, brochures, and visual reports using Adobe Photoshop, Illustrator, and Canva.</li>
+              <li>Collaborated with clients and marketing teams to develop engaging content strategies aligned with brand messaging.</li>
+              <li>Delivered quality content under tight deadlines, combining creativity with clarity and market-focused messaging.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>Content & Visual Design Intern</h4>
+            <h5>April 2022</h5>
+            <p><em>Omuga Technical and Vocational Institute</em></p>
+            <ul>
+              <li>Taught Java and C++ programming basics to students and assisted in preparing learning resources and IT guides.</li>
+              <li>Supported installation and troubleshooting of computer systems and hardware.</li>
+              <li>Created student materials, flyers, and simple infographics to enhance learning and communication within the institute.</li>
+            </ul>
+          </div>
+        </div><!-- End Right Column -->
+
+      </div><!-- End Row -->
+
+    </div><!-- End Container -->
+
+  </section><!-- /Resume Section -->
+         <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Check out some of my content writing samples, including articles, blogs, and creative pieces.</p>
+    </div><!-- End Section Title -->
+
+    <!-- Portfolio Items -->
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 portfolio-container">
+
+            <!-- Portfolio Item 1: Creative Article -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-info">
+                        <h4>Creative Article</h4>
+                        <div class="portfolio-links">
+                            <a href="{% static 'pdf/article-1.pdf' %}" target="_blank" title="View PDF"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 2: Blog Sample -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-info">
+                        <h4>Blog Sample</h4>
+                        <div class="portfolio-links">
+                            <a href="{% static 'pdf/blog-sample.pdf' %}" target="_blank" title="View PDF"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Portfolio Item 3: Creative Writing -->
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-info">
+                        <h4>Creative Writing</h4>
+                        <div class="portfolio-links">
+                            <a href="{% static 'pdf/creative-story.pdf' %}" target="_blank" title="View PDF"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+        </div><!-- End Row -->
+
+    </div><!-- End Container -->
+
+</section><!-- End Portfolio Section -->
+
+        <!-- Services Section -->
+  <section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Services</h2>
+      <p>I offer a wide range of creative and technical services to help individuals and brands communicate effectively through both words and visuals. Whether you need captivating content, sleek designs, or technical IT support—I’ve got you covered.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon flex-shrink-0"><i class="bi bi-pencil-square"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Content Writing</a></h4>
+            <p class="description">Crafting SEO-optimized blog posts, marketing copy, and website content that drives traffic, informs, and converts.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon flex-shrink-0"><i class="bi bi-brush"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Graphic Design</a></h4>
+            <p class="description">Designing professional graphics including social media posts, brochures, posters, and brand identities using Adobe Photoshop, Illustrator, and Canva.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon flex-shrink-0"><i class="bi bi-display"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Visual Content Creation</a></h4>
+            <p class="description">Creating compelling eBooks, presentations, and digital reports that communicate clearly and look visually appealing.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon flex-shrink-0"><i class="bi bi-bar-chart-line"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Data & Statistical Reporting</a></h4>
+            <p class="description">Analyzing data using SPSS and Python to generate meaningful insights and statistical reports for academic or professional use.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon flex-shrink-0"><i class="bi bi-hdd-network"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">IT & Network Support</a></h4>
+            <p class="description">Providing basic IT support including system setup, software installation, troubleshooting, and Wi-Fi/network configuration.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+          <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Training & Mentorship</a></h4>
+            <p class="description">Offering foundational training in programming languages like Java and C++, and mentoring students in basic computer literacy.</p>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Services Section -->
+             <!-- Contact Section -->
+  <section id="contact" class="contact section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Interested in collaborating or need high-quality content and design work? Feel free to reach out—I’m always open to new opportunities and connections.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+
+          <div class="info-wrap">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Kadongo, Homa Bay County, Kenya</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Me</h3>
+                <p>+254 768 914 692</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>stephenokinyi405@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.68035081098!2d34.617450749999995!3d-0.5027231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829e6d3c30a793b%3A0x34b0278c4cc5d9aa!2sKadongo%2C%20Kenya!5e0!3m2!1sen!2ske!4v1717157652843!5m2!1sen!2ske" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Contact Section -->
+
+
+
+
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container">
+    <div class="copyright text-center ">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Stephen Akelo Portfolio</strong> <span>All Rights Reserved</span></p>
+    </div>
+    <div class="credits">
+
+      Designed by <a href="#">Veried-p@Andrew</a>
+    </div>
+  </div>
+  
+</footer>
+
+{% endblock %}

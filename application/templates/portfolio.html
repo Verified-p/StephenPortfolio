@@ -1,0 +1,82 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Portfolio - Stephen Akelo Portfolio{% endblock %}
+{% load static %}
+{% block content %}
+
+<main>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>Check out some of my content writing samples, including articles, blogs, and creative pieces.</p>
+      </div><!-- End Section Title -->
+  
+      <!-- Portfolio Items -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+          <div class="row gy-4 portfolio-container">
+  
+              <!-- Portfolio Item 1: Creative Article -->
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                  <div class="portfolio-wrap">
+                      <div class="portfolio-info">
+                          <h4>Creative Article</h4>
+                          <div class="portfolio-links">
+                              <a href="{% static 'pdf/article-1.pdf' %}" target="_blank" title="View PDF"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                          </div>
+                      </div>
+                  </div>
+              </div><!-- End Portfolio Item -->
+  
+              <!-- Portfolio Item 2: Blog Sample -->
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                  <div class="portfolio-wrap">
+                      <div class="portfolio-info">
+                          <h4>Blog Sample</h4>
+                          <div class="portfolio-links">
+                              <a href="{% static 'pdf/blog-sample.pdf' %}" target="_blank" title="View PDF"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                          </div>
+                      </div>
+                  </div>
+              </div><!-- End Portfolio Item -->
+  
+              <!-- Portfolio Item 3: Creative Writing -->
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                  <div class="portfolio-wrap">
+                      <div class="portfolio-info">
+                          <h4>Creative Writing</h4>
+                          <div class="portfolio-links">
+                              <a href="{% static 'pdf/creative-story.pdf' %}" target="_blank" title="View PDF"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                          </div>
+                      </div>
+                  </div>
+              </div><!-- End Portfolio Item -->
+  
+          </div><!-- End Row -->
+  
+      </div><!-- End Container -->
+  
+  </section><!-- End Portfolio Section -->
+
+</main>
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Stephen Akelo Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+  
+        Designed by <a href="#">Veried-p@Andrew</a>
+      </div>
+    </div>
+    
+  </footer>
+
+  {% endblock %}

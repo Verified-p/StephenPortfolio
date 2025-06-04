@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}service-details - Stephen Akelo Portfolio{% endblock %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Service Details</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">Service Details</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Service Details Section -->
+  <section id="service-details" class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-list">
+            <a href="#" class="active">Creative Writing</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">Visual Content Creation</a>
+            <a href="#">Brand Identity</a>
+            <a href="#">IT & Data Training</a>
+          </div>
+
+          <h4>Dynamic Digital Services</h4>
+          <p>My multidisciplinary approach blends creativity, communication, and technical skills. With a background in Applied Statistics, I offer a data-driven perspective to all things design, writing, and training—delivering work that not only looks good but functions with purpose.</p>
+        </div>
+
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'img/services.jpg' %}" alt="Service Visual" class="img-fluid services-img">
+          <h3>Empowering Brands Through Words, Visuals, and Technology</h3>
+          <p>
+            I help individuals and brands elevate their identity and message through creative design, content writing, and digital solutions. My services are grounded in both artistic expression and analytical precision, thanks to my training in Applied Statistics and IT.
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Compelling content for websites, blogs, campaigns, and digital media.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>High-impact graphic designs, social media visuals, and branding materials.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Custom visual content that tells your story and defines your brand.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Training in statistical tools (SPSS, R), programming (Python, C++, Java), and basic IT literacy.</span></li>
+          </ul>
+          <p>
+            My creative process is informed by data and user experience. I don’t just design or write—I research, analyze, and tailor every output to the client’s objectives, combining form and function to deliver lasting impact.
+          </p>
+          <p>
+            Let's work together to bring clarity, creativity, and confidence to your digital presence.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- /Service Details Section -->
+
+</main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Stephen Akelo Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+  
+        Designed by <a href="#">Veried-p@Andrew</a>
+      </div>
+    </div>
+    
+  </footer>
+
+  {% endblock %}

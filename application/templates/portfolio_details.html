@@ -1,0 +1,122 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Portfolio-Details - Stephen Akelo Portfolio{% endblock %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">Portfolio Details</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+
+            <div class="swiper-wrapper align-items-center">
+
+              <!-- Portfolio Images  -->
+              <div class="swiper-slide">
+                <img src="{% static 'img/portfolio/sample-1.jpg' %}" alt="Portfolio Sample 1">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{% static 'img/portfolio/sample-2.jpg' %}" alt="Portfolio Sample 2">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{% static 'img/portfolio/sample-3.jpg' %}" alt="Portfolio Sample 3">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{% static 'img/portfolio/sample-4.jpg' %}" alt="Portfolio Sample 4">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Project Information</h3>
+            <ul>
+              <li><strong>Category</strong>: Creative Writing</li> 
+              <li><strong>Client</strong>: Okinyi Stephen Akelo</li> 
+              <li><strong>Project Date</strong>: 15 May, 2023</li> 
+              <li><strong>Project URL</strong>: <a href="#">Portfolio.com</a></li> 
+            </ul>
+          </div>
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Shark NV356E S2 Review: A Comprehensive Vacuum Guide</h2> 
+            <p>
+              The Shark NV356E S2 is a highly efficient and versatile vacuum cleaner that combines powerful suction and user-friendly features. In this detailed review, we explored its design, features, performance, and more to help consumers make an informed choice. Its Lift-Away technology and HEPA filtration system are standout features that elevate its overall functionality.
+            </p>
+            <p>
+              This review highlights the Shark NV356E S2’s ability to handle both hard floors and carpets with ease, its long-lasting durability, and its affordability compared to similar models in the market. The article also addresses both pros and cons of the product, helping consumers decide if this vacuum is right for them.
+            </p>
+          </div>
+          <!--  PDF download link  -->
+          <div class="portfolio-pdf">
+            <a href="{% static 'pdfs/shark-nv356e-review.pdf' %}" target="_blank" class="btn btn-primary">Download Full Review (PDF)</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+  
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Stephen Akelo Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+  
+        Designed by <a href="#">Veried-p@Andrew</a>
+      </div>
+    </div>
+    
+  </footer>
+
+  {% endblock %}
