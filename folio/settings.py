@@ -1,20 +1,17 @@
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-07624ff3=uktr6)d=kk*_8+edg8zc)!y_#@l^w^gdl^=t@*fbz'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-07624ff3=uktr6)d=kk*_8+edg8zc)!y_#@l^w^gdl^=t@*fbz')  # Set via environment variable for production
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'  # Set this environment variable for production
 
 # Add allowed hosts for production deployment
-ALLOWED_HOSTS = ['stephenportfolio-7.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['stephenportfolio-8.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -57,18 +54,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'folio.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# Database settings - Not needed for your portfolio (using dummy database to bypass DB issues)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.dummy',  # Using a dummy backend to avoid database errors.
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+# Password validation (Optional, just in case you need it for authentication)
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -84,20 +77,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
+# Internationalization settings
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = 'static/'  # URL to serve static files from
-STATICFILES_DIRS = [BASE_DIR / 'static']  # Custom static directory
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Custom static directory (in development)
 
 # Define the directory where static files will be collected for production
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # This will be the directory where collectstatic puts all the files
@@ -106,14 +94,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # This will be the directory where colle
 if not DEBUG:
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
+# CSRF trusted origins (important for production)
+CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-8.onrender.com']
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
