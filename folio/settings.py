@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-07624ff3=uktr6)d=kk*_8+edg8zc)!y_#@l^w^gdl^=t@*fbz
 DEBUG = True
 
 # Add allowed hosts for production deployment
-ALLOWED_HOSTS = ['stephenportfolio-6.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['stephenportfolio-5.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
