@@ -1,5 +1,5 @@
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,6 +13,9 @@ DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'  # Set this environment var
 # Add allowed hosts for production deployment
 ALLOWED_HOSTS = ['stephenportfolio-8.onrender.com', 'localhost', '127.0.0.1']
 
+# CSRF trusted origins (important for production)
+CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-9.onrender.com']
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'application'  # Make sure your application is listed here
+    'application',  # Make sure your application is listed here
 ]
 
 MIDDLEWARE = [
@@ -39,7 +42,7 @@ ROOT_URLCONF = 'folio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR / "templates"],  # Make sure you have a templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,9 +96,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # This will be the directory where colle
 # Use hashed static files in production to avoid cache issues
 if not DEBUG:
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-
-# CSRF trusted origins (important for production)
-CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-8.onrender.com']
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
