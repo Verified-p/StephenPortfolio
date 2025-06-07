@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: stephen-portfolio
+    env: python
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --no-input"
+    startCommand: "gunicorn folio.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: django-insecure-07624ff3=uktr6)d=kk*_8+edg8zc)!y_#@l^w^gdl^=t@*fbz
+      - key: DJANGO_DEBUG
+        value: "False"
