@@ -11,10 +11,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-07624ff3=uktr6)d=kk
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'  # Set this environment variable for production
 
 # Add allowed hosts for production deployment
-ALLOWED_HOSTS = ['stephenportfolio-S.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['stephenportfolio-t.onrender.com', 'localhost', '127.0.0.1']
 
 # CSRF trusted origins (important for production)
-CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-S.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-t.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -57,10 +57,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'folio.wsgi.application'
 
-# Database settings - Not needed for your portfolio (using dummy database to bypass DB issues)
+# Database settings (using SQLite for development)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.dummy',  # Using a dummy backend to avoid database errors.
+        'ENGINE': 'django.db.backends.sqlite3',  # Use SQLite for development
+        'NAME': BASE_DIR / 'db.sqlite3',         # SQLite database file
     }
 }
 
@@ -96,6 +97,25 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # This will be the directory where colle
 # Use hashed static files in production to avoid cache issues
 if not DEBUG:
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+# Logging Configuration - Added to capture detailed logs for debugging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',  # Set to DEBUG for more detailed logging
+            'propagate': True,
+        },
+    },
+}
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
