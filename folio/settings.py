@@ -11,10 +11,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-production-secret-key')  # Set
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'  # Set this environment variable for production
 
 # Add allowed hosts for production deployment
-ALLOWED_HOSTS = ['stephenportfolio-r.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['stephenportfolio-l.onrender.com', 'localhost', '127.0.0.1']
 
 # CSRF trusted origins (important for production)
-CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-r.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-l.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
