@@ -88,10 +88,10 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'  # URL to serve static files from
+STATIC_URL = '/static/'  # URL to serve static files from
 STATICFILES_DIRS = [BASE_DIR / 'static']  # Custom static directory (in development)
 
-# Define the directory where static files will be collected for production
+# Directory where static files will be collected for production
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # This will be the directory where collectstatic puts all the files
 
 # Use hashed static files in production to avoid cache issues
@@ -119,3 +119,11 @@ LOGGING = {
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SECURITY SETTINGS (for production)
+SECURE_SSL_REDIRECT = not DEBUG  # Redirect HTTP to HTTPS in production
+CSRF_COOKIE_SECURE = not DEBUG   # Set to True in production
+SESSION_COOKIE_SECURE = not DEBUG  # Set to True in production
+X_FRAME_OPTIONS = 'DENY'  # Prevents your site from being embedded in an iframe (good for security)
+SECURE_HSTS_SECONDS = 3600  # Forces browsers to only communicate over HTTPS (1 hour)
+
