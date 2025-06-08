@@ -11,10 +11,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-07624ff3=uktr6)d=kk
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'  # Set this environment variable for production
 
 # Add allowed hosts for production deployment
-ALLOWED_HOSTS = ['stephenportfolio-t.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['stephenportfolio-ac.onrender.com', 'localhost', '127.0.0.1']
 
 # CSRF trusted origins (important for production)
-CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-t.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-ac.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
