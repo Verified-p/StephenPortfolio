@@ -5,16 +5,16 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-07624ff3=uktr6)d=kk*_8+edg8zc)!y_#@l^w^gdl^=t@*fbz')  # Set via environment variable for production
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-production-secret-key')  # Set via environment variable for production
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'  # Set this environment variable for production
 
 # Add allowed hosts for production deployment
-ALLOWED_HOSTS = ['stephenportfolio-v.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['stephenportfolio-p.onrender.com', 'localhost', '127.0.0.1']
 
 # CSRF trusted origins (important for production)
-CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-v.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://stephenportfolio-p.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -42,7 +42,7 @@ ROOT_URLCONF = 'folio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],  # Make sure you have a templates folder
+        'DIRS': [BASE_DIR / "templates"],  # Ensure you have a templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -57,11 +57,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'folio.wsgi.application'
 
-# Database settings (using SQLite for development)
+# Database settings (using SQLite for development, use a more robust DB like PostgreSQL for production)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Use SQLite for development
-        'NAME': BASE_DIR / 'db.sqlite3',         # SQLite database file
+        'ENGINE': 'django.db.backends.sqlite3',  # Change to PostgreSQL in production
+        'NAME': BASE_DIR / 'db.sqlite3',         # SQLite database file for dev
     }
 }
 
@@ -126,4 +126,12 @@ CSRF_COOKIE_SECURE = not DEBUG   # Set to True in production
 SESSION_COOKIE_SECURE = not DEBUG  # Set to True in production
 X_FRAME_OPTIONS = 'DENY'  # Prevents your site from being embedded in an iframe (good for security)
 SECURE_HSTS_SECONDS = 3600  # Forces browsers to only communicate over HTTPS (1 hour)
+
+# Email settings (Optional for production)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Change if using SMTP server
+EMAIL_HOST = 'smtp.gmail.com'  # Example SMTP server
+EMAIL_PORT = 587  # Port for Gmail
+EMAIL_USE_TLS = True  # Use TLS for security
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Set via environment variable
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Set via environment variable
 
